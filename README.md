@@ -11,9 +11,9 @@
 ## Hive Database Setup:
 - Create a database in Hive.
 - Create the following schemas in Hive:
-** 1st Hive staging table for pointing to the dataset location to select data from.
-** 2nd Hive ORC table partitioned by Country to improve query performance.
-** 3rd Final Hive table to generate the report and output file for visualization.
+* 1st Hive staging table for pointing to the dataset location to select data from.
+* 2nd Hive ORC table partitioned by Country to improve query performance.
+* 3rd Final Hive table to generate the report and output file for visualization.
 
 ## Oozie Workflow Setup:
 - Use Cloudera HUE on the virtual machine to create an Oozie workflow.
