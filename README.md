@@ -1,6 +1,6 @@
 # Automated COVID Dataset Pipeline Workflow
 
-#Data Ingestion:
+## Data Ingestion:
 - Create a folder named "/home/cloudera/covid_project" on the virtual machine.
 - Inside the "covid_project" folder, create two subfolders: "landing_zone" and "scripts".
 - Use WinSCP to upload the dataset "covid-19.csv" into the "landing_zone" folder ("/home/cloudera/covid_project/landing_zone/COVID_SRC_LZ").
