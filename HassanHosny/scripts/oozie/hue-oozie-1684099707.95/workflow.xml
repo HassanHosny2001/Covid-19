@@ -1,0 +1,28 @@
+<workflow-app name="COVID-19_Analysis" xmlns="uri:oozie:workflow:0.5">
+    <start to="shell-9c91"/>
+    <kill name="Kill">
+        <message>Action failed, error message[${wf:errorMessage(wf:lastErrorNode())}]</message>
+    </kill>
+    <action name="shell-9c91">
+        <shell xmlns="uri:oozie:shell-action:0.1">
+            <job-tracker>${jobTracker}</job-tracker>
+            <name-node>${nameNode}</name-node>
+            <exec>/user/hue/oozie/workspaces/hue-oozie-1684099707.95/Load_COVID_TO_HDFS.sh</exec>
+            <file>/user/hue/oozie/workspaces/hue-oozie-1684099707.95/Load_COVID_TO_HDFS.sh#Load_COVID_TO_HDFS.sh</file>
+              <capture-output/>
+        </shell>
+        <ok to="hive2-badb"/>
+        <error to="Kill"/>
+    </action>
+    <action name="hive2-badb">
+        <hive2 xmlns="uri:oozie:hive2-action:0.1">
+            <job-tracker>${jobTracker}</job-tracker>
+            <name-node>${nameNode}</name-node>
+            <jdbc-url>jdbc:hive2://quickstart.cloudera:10000/default</jdbc-url>
+            <script>covid_data_preparation.hql</script>
+        </hive2>
+        <ok to="End"/>
+        <error to="Kill"/>
+    </action>
+    <end name="End"/>
+</workflow-app>
