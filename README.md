@@ -1,4 +1,4 @@
-#Automated COVID Dataset Pipeline Workflow
+# Automated COVID Dataset Pipeline Workflow
 
 #Data Ingestion:
 - Create a folder named "/home/cloudera/covid_project" on the virtual machine.
