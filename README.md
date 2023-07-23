@@ -1,12 +1,14 @@
 # COVID-19 Workflow
 
+##Overview:
+- This repository presents a streamlined COVID-19 data analysis workflow using data from Kaggle, and it utilizes Cloudera, HDFS, Hive, Oozie, and Power BIز
+
 ## Data Ingestion:
-- Create a folder named "/home/cloudera/covid_project" on the virtual machine.
-- Inside the "covid_project" folder, create two subfolders: "landing_zone" and "scripts".
-- Use WinSCP to upload the dataset "covid-19.csv" into the "landing_zone" folder ("/home/cloudera/covid_project/landing_zone/COVID_SRC_LZ").
+- Import COVID-19 datasets from Kaggle, a reliable data source.
+- Clean and prepare the data for analysis.
 
 ## Data Loading:
-- Load the dataset from "COVID_SRC_LZ" to HDFS directory named "/user/cloudera/ds/COVID_HDFS_LZ" using HDFS command line interface (CLI) commands in a shell script.
+- Load the dataset to HDFS.
 
 ## Hive Database Setup:
 - Create a database in Hive.
@@ -16,12 +18,9 @@
 * 3rd Final Hive table to generate the report and output file for visualization.
 
 ## Oozie Workflow Setup:
-- Use Cloudera HUE on the virtual machine to create an Oozie workflow.
-
-## Execute Oozie Workflow:
-- Manually run the Oozie workflow job from HUE to process the data and generate the final output.
-- The final output file will be located at "/user/cloudera/ds/COVID_FINAL_OUTPUT" in HDFS.
+- Automate data processing tasks with an Oozie workflow in Cloudera HUE.
+- Schedule regular updates for up-to-date analysis.
 
 ## Data Visualization:
-- Download the final output report file from the HDFS file location mentioned above.
-- Visualize the downloaded file using Power BI, applying filters for each visualization requirement (top 10 ranking countries in death rate, top 10 ranking countries in testing rate, and top 10 ranking countries in testing rate on a pie chart).
+- Gain valuable insights from COVID-19 data using Power BI.
+- Create interactive visualizations for better understanding.
