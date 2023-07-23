@@ -1,7 +1,7 @@
 # COVID-19 Workflow
 
 ##Overview:
-- This repository presents a streamlined COVID-19 data analysis workflow using data from Kaggle, and it utilizes Cloudera, HDFS, Hive, Oozie, and Power BIز
+- This repository presents a streamlined COVID-19 data analysis workflow using data from Kaggle, and it utilizes Cloudera, HDFS, Hive, Oozie, and Power BI.
 
 ## Data Ingestion:
 - Import COVID-19 datasets from Kaggle, a reliable data source.
